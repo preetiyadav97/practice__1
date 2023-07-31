@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Update data</h2>
+
+<form action="" method='POST'>
+{% if obj %}
+ {% csrf_token %}
+  <label for="fname">First name:</label><br>
+  <input type="text" id="name" name="name" value={{obj.firstname}}><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value={{obj.seondname}}><br><br>
+  <label for="lname">Email:</label><br>
+  <input type="email" id="mail" name="mail" value={{obj.email}}><br><br>
+  <label for="lname">Salary:</label><br>
+  <input type="number" id="salary" name="salary" value={{obj.salary}}><br><br>
+  <input type="submit" value="Submit">
+ {% endif %}
+</form> 
+
+
+
+</body>
+</html>

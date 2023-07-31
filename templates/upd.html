@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>HTML Forms</h2>
+
+<form action=  method= "POST">
+
+{% if obj %}
+{% csrf_token %}
+  <label for="fname">PI name:</label><br>
+  <input type="text" id="name" name="name" value={{obj.pl_name}}><br>
+  <label for="lname">PI email:</label><br>
+  <input type="email" id="mail" name="mail" value={{obj.pl_email}}><br><br>
+  <label for="lname">Phone:</label><br>
+  <input type="number" id="phone" name="phone" value={{obj.pl_phone}}><br><br>
+  <label for="lname">image:</label><br>
+  <input type="file" id="image" name="image" value=><br><br>
+  <input type="submit" value="Submit">
+  {% endif %}
+</form> 
+
+
+
+</body>
+</html>
