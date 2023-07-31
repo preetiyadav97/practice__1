@@ -70,7 +70,10 @@ def  Delete_place(request,pk):
     Col={'lis':lis}
 
     return render(request,'about.html',Col)
-    
+
+
+def kyu_bhai(request):
+    pass    
 
 
                                   
