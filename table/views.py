@@ -11,7 +11,7 @@ def readTable(request):
 def update_place(request,pk):
     
     obj = detail.objects.get(id = pk )
-    print(obj)
+    print(obj)# 
     
     
     if request.method == 'POST':

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Fill your information</h2>
+
+
+<form action="" method='POST'  enctype="multipart/form-data">
+
+ {% csrf_token %}
+ <label for="fname">PI name::</label><br>
+ <input type="text" id="name" name="name" ><br>
+ 3
+ <label for="lname">PI email:</label><br>
+ <input type="email" id="mail" name="mail" ><br><br>
+ <label for="lname">Phone:</label><br>
+ <input type="number" id="phone" name="phone" ><br><br>
+ <label for="lname">Image:</label><br>
+ <input type="file" id="image" name="image" ><br><br>
+ <input type="submit" value="Submit">
+
+
+</form> 
+
+
+
+</body>
+</html>

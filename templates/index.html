@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -58,7 +59,7 @@ tr:nth-child(even) {background-color: #f2f2f2;}
     <title>Document</title>
 </head>
 <body>
-    <h1>This is index pages</h1>
+    <h1>This is index pagesaasdasdasd</h1>
     <table>
         <tr>
             {% comment %} <th>Id</th> {% endcomment %}
@@ -66,20 +67,28 @@ tr:nth-child(even) {background-color: #f2f2f2;}
             <th>Email</th>
             <th>Phone</th>
             <th>Image</th>
-            <th>Save</th>
+            <th>Create</th>
+
+            <th>Update</th>
+
             <th>Delete</th>
 
             
         </tr>
-        {%for i in show %}
+        {% for i in show %}
         <tr>
-        {% comment %} <td>{{i.id}}</td> {% endcomment %}
-        <td>{{i.pl_name}}</td>
-        <td>{{i.pl_email}}</td>
-        <td>{{i.pl_phone}}</td>
-        <td>{{i.pl_image}}</td>
-        <td><button class="button button1">update</button></td>
-        <td><button class="button button2">Delete</button></td>
+    
+          <td>{{i.pl_name}}</td>
+          <td>{{i.pl_email}}</td>
+          <td>{{i.pl_phone}}</td>
+          <td> 
+            <img src="{{i.pl_image.url}}" alt="Trulli" class="prod-size" width="300" height="100" >
+          </td>
+          <td><button class="button button1"><a href="http://127.0.0.1:8000/se/show/{{i.id}}/">View</a></button></td>
+
+
+          <td><button class="button button1"><a href="http://127.0.0.1:8000/se/update/{{i.id}}/">Update</a></button></td>
+          <td><button class="button button2"><a href="http://127.0.0.1:8000/se/del/{{i.id}}/">Delete</a></button></td>
 
         </tr>
 
@@ -87,7 +96,7 @@ tr:nth-child(even) {background-color: #f2f2f2;}
     </table>
     {% comment %} <button class="button button1">Save</button> {% endcomment %}
     {% comment %} <button class="button button2">Delete</button> {% endcomment %}
-
+    <td><button class="button button1"><a href="http://127.0.0.1:8000/se/reate/">Create</a></button></td>
 </body>
 </html> 
 

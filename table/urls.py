@@ -9,6 +9,7 @@ urlpatterns = [
     path('delete/<int:pk>/',Delete_place, name = 'delete1'),
 
     path('Create/',Create_place, name = 'Create1')
+  
 
    
 ]
